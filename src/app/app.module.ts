@@ -12,6 +12,7 @@ import { BackofficeuserComponent } from './backofficeuser/backofficeuser.compone
 import { VistadellateComponent } from './vistadellate/vistadellate.component';
 import { ContactComponent } from './contact/contact.component';
 import { ElementsModule } from './elements/elements.module';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ElementsModule } from './elements/elements.module';
     BackofficeuserComponent,
     VistadellateComponent,
     ContactComponent,
+    LandingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ElementsModule],
   providers: [],

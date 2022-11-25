@@ -4,12 +4,17 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { BackofficeComponent } from './backoffice/backoffice.component';
 import { BackofficeuserComponent } from './backofficeuser/backofficeuser.component';
 import { ContactComponent } from './contact/contact.component';
+import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { RegisterComponent } from './register/register.component';
 import { VistadellateComponent } from './vistadellate/vistadellate.component';
 
 const routes: Routes = [
+  {
+    path: 'landing',
+    component: LandingComponent,
+  },
   {
     path: 'aboutus',
     component: AboutusComponent,
