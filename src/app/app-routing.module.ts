@@ -11,6 +11,8 @@ import { RegisterComponent } from './register/register.component';
 import { VistadellateComponent } from './vistadellate/vistadellate.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: '/landing' },
+  // { path: '**', component: LandingComponent },
   {
     path: 'landing',
     component: LandingComponent,
