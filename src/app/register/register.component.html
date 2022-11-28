@@ -1,5 +1,5 @@
 <div class="container2 container mt-5">
-  <form>
+  <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
     <div class="text-center mb-3">
       <p>Registrate con tu cuenta de Google:</p>
       <button type="button" class="btn btn-warning btn-floating mx-1">

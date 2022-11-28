@@ -9,10 +9,14 @@
       role="tabpanel"
       aria-labelledby="tab-login"
     >
-      <form>
+      <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
         <div class="text-center mb-3">
           <p>Entra con tu cuenta Google:</p>
-          <button type="button" class="btn btn-warning btn-floating mx-1">
+          <button
+            type="button"
+            (click)="onClick()"
+            class="btn btn-warning btn-floating mx-1"
+          >
             <i class="bi bi-google"></i>
           </button>
         </div>

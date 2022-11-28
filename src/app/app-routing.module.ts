@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { RegisterComponent } from './register/register.component';
 import { VistadellateComponent } from './vistadellate/vistadellate.component';
+import { canActivate, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/landing' },
@@ -24,10 +25,12 @@ const routes: Routes = [
   {
     path: 'backoffice',
     component: BackofficeComponent,
+    ...canActivate(() => redirectUnauthorizedTo('/landing')),
   },
   {
     path: 'backofficeuser',
     component: BackofficeuserComponent,
+    ...canActivate(() => redirectUnauthorizedTo('/landing')),
   },
   {
     path: 'contact',
@@ -40,6 +43,7 @@ const routes: Routes = [
   {
     path: 'main',
     component: MainComponent,
+    ...canActivate(() => redirectUnauthorizedTo('/landing')),
   },
   {
     path: 'register',
@@ -48,6 +52,7 @@ const routes: Routes = [
   {
     path: 'vistadetalle',
     component: VistadellateComponent,
+    ...canActivate(() => redirectUnauthorizedTo('/landing')),
   },
 ];
 
