@@ -10,8 +10,18 @@
           </h1>
           <div class="row justify-content-center">
             <div class="col-auto">
-              <button class="btn btn-warning" type="submit">Entrar</button>
-              <button class="btn mx-3 btn-warning" type="submit">
+              <button
+                [routerLink]="'/login'"
+                class="btn btn-warning"
+                type="submit"
+              >
+                Entrar
+              </button>
+              <button
+                [routerLink]="'/register'"
+                class="btn mx-3 btn-warning"
+                type="submit"
+              >
                 Registrarse
               </button>
             </div>
