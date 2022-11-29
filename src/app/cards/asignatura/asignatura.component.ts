@@ -13,7 +13,7 @@ export class AsignaturaComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService
-      .getPictogramsByCategory('Alimento de origen animal')
+      .getPictogramsByCategory('Asignatura')
       .subscribe((data) => {
         this.pictogramsList = data;
         console.log(data);

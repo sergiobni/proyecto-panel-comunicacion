@@ -13,7 +13,7 @@ export class EventoComponent implements OnInit {
 
   ngOnInit(): void {
        this.apiService
-      .getPictogramsByCategory('Alimento de origen animal')
+      .getPictogramsByCategory('evento')
       .subscribe((data) => {
         this.pictogramsList = data;
         console.log(data);

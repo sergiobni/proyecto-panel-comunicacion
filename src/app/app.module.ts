@@ -23,10 +23,6 @@ import { PersonaComponent } from './cards/persona/persona.component';
 import { AsignaturaComponent } from './cards/asignatura/asignatura.component';
 import { AnimalComponent } from './cards/animal/animal.component';
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,8 +42,8 @@ import { AnimalComponent } from './cards/animal/animal.component';
     EventoComponent,
     ColorComponent,
     PersonaComponent,
-   AsignaturaComponent,
-   AnimalComponent
+    AsignaturaComponent,
+    AnimalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ElementsModule, HttpClientModule],
   providers: [],

@@ -13,7 +13,7 @@ export class ColorComponent implements OnInit {
 
   ngOnInit(): void {
         this.apiService
-      .getPictogramsByCategory('Alimento de origen animal')
+      .getPictogramsByCategory('color')
       .subscribe((data) => {
         this.pictogramsList = data;
         console.log(data);
