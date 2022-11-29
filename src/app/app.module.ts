@@ -15,6 +15,7 @@ import { BackofficeuserComponent } from './backofficeuser/backofficeuser.compone
 import { VistadellateComponent } from './vistadellate/vistadellate.component';
 import { ContactComponent } from './contact/contact.component';
 import { LandingComponent } from './landing/landing.component';
+
 import { NombrePipe } from './nombre.pipe';
 import { AlimentoAnimalComponent } from './cards/alimento-animal/alimento-animal.component';
 import { AlimentoProcesadoComponent } from './cards/alimento-procesado/alimento-procesado.component';
@@ -25,6 +26,10 @@ import { PersonaComponent } from './cards/persona/persona.component';
 import { AsignaturaComponent } from './cards/asignatura/asignatura.component';
 import { AnimalComponent } from './cards/animal/animal.component';
 
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +37,7 @@ import { AnimalComponent } from './cards/animal/animal.component';
     MainComponent,
     AboutusComponent,
     BackofficeComponent,
+
     LoginComponent,
     RegisterComponent,
     BackofficeuserComponent,
@@ -48,8 +54,17 @@ import { AnimalComponent } from './cards/animal/animal.component';
     AsignaturaComponent,
     AnimalComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ElementsModule,
-    HttpClientModule, NgxPaginationModule],
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule, NgxPaginationModule,
+    ElementsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+  ],
+
   providers: [],
   bootstrap: [AppComponent],
 })
