@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css'],
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
 
-  constructor() { }
+public page!: number;
 
-  ngOnInit(): void {
+  constructor(private apiService: ApiService) {}
+  @Input() pictogramsList: any;
+
+
+ getPictograms(categoria: string) {
+    this.apiService.getPictogramsByCategory(categoria).subscribe((data) => {
+      this.pictogramsList = data;
+    });
   }
-
 }
+
