@@ -13,6 +13,7 @@ import { VistadellateComponent } from './vistadellate/vistadellate.component';
 import { ContactComponent } from './contact/contact.component';
 import { ElementsModule } from './elements/elements.module';
 import { LandingComponent } from './landing/landing.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LandingComponent } from './landing/landing.component';
     VistadellateComponent,
     ContactComponent,
     LandingComponent,
+    ServicesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ElementsModule],
   providers: [],
