@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 
 @Component({
-  selector: 'app-alimento-animal',
-  templateUrl: './alimento-animal.component.html',
-  styleUrls: ['./alimento-animal.component.css'],
+  selector: 'app-asignatura',
+  templateUrl: './asignatura.component.html',
+  styleUrls: ['./asignatura.component.css'],
 })
-export class AlimentoAnimalComponent implements OnInit {
+export class AsignaturaComponent implements OnInit {
   pictogramsList: any;
 
   constructor(private apiService: ApiService) {}
@@ -20,3 +20,4 @@ export class AlimentoAnimalComponent implements OnInit {
       });
   }
 }
+

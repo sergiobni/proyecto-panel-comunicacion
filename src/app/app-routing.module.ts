@@ -9,6 +9,18 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { RegisterComponent } from './register/register.component';
 import { VistadellateComponent } from './vistadellate/vistadellate.component';
+import { AlimentoAnimalComponent } from './cards/alimento-animal/alimento-animal.component';
+import { AlimentoProcesadoComponent } from './cards/alimento-procesado/alimento-procesado.component';
+import { CocinaComponent } from './cards/cocina/cocina.component';
+import { PersonaComponent } from './cards/persona/persona.component';
+import { ColorComponent } from './cards/color/color.component';
+import { EventoComponent } from './cards/evento/evento.component';
+import { AnimalComponent } from './cards/animal/animal.component';
+import { AsignaturaComponent } from './cards/asignatura/asignatura.component';
+
+
+
+
 
 const routes: Routes = [
   {
@@ -44,8 +56,40 @@ const routes: Routes = [
     component: RegisterComponent,
   },
   {
-    path: 'vistadetalle',
+    path: 'vistadetalle/:id',
     component: VistadellateComponent,
+  },
+  {
+    path: 'alimento-animal',
+    component: AlimentoAnimalComponent,
+  },
+  {
+    path: 'alimento-procesado',
+    component: AlimentoProcesadoComponent,
+  },
+  {
+    path: 'cocina',
+    component: CocinaComponent,
+  },
+  {
+    path: 'persona',
+    component: PersonaComponent,
+  },
+  {
+    path: 'animal',
+    component: AnimalComponent,
+  },
+  {
+    path: 'evento',
+    component: EventoComponent,
+  },
+  {
+    path: 'color',
+    component: ColorComponent,
+  },
+  {
+    path: 'asignatura',
+    component: AsignaturaComponent,
   },
 ];
 

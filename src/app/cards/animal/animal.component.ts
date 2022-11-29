@@ -2,21 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 
 @Component({
-  selector: 'app-alimento-animal',
-  templateUrl: './alimento-animal.component.html',
-  styleUrls: ['./alimento-animal.component.css'],
+  selector: 'app-animal',
+  templateUrl: './animal.component.html',
+  styleUrls: ['./animal.component.css'],
 })
-export class AlimentoAnimalComponent implements OnInit {
+export class AnimalComponent implements OnInit {
   pictogramsList: any;
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.apiService
+        this.apiService
       .getPictogramsByCategory('Alimento de origen animal')
       .subscribe((data) => {
         this.pictogramsList = data;
         console.log(data);
       });
   }
-}
+  }
+

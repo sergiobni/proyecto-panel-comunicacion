@@ -13,7 +13,7 @@ export class AlimentoProcesadoComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService
-      .getPictogramsByCategory('Alimento de origen animal')
+      .getPictogramsByCategory('Alimento procesado')
       .subscribe((data) => {
         this.pictogramsList = data;
         console.log(data);
