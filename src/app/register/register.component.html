@@ -1,25 +1,19 @@
 <div class="container2 container mt-5">
   <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
-    <div class="text-center mb-3">
-      <p>Registrate con tu cuenta de Google:</p>
-      <button type="button" class="btn btn-warning btn-floating mx-1">
-        <i class="bi bi-google"></i>
-      </button>
-    </div>
-
-    <p class="text-center">También puedes crear una cuenta de usuario:</p>
+    <p class="text-center">Crea una cuenta de usuario:</p>
     <!-- Email input -->
     <div class="form-outline mb-4">
-      <input type="email" id="form6Example5" class="form-control" />
-      <label class="form-label" for="form6Example5">Email</label>
+      <input type="email" class="form-control" formControlName="email" />
+      <label class="form-label">Email</label>
     </div>
 
     <div class="form-outline mb-4">
-      <input type="password" id="registerPassword" class="form-control" />
-      <label class="form-label" for="registerPassword">Contraseña</label>
+      <input type="password" class="form-control" formControlName="password" />
+      <label class="form-label">Contraseña</label>
     </div>
 
-    <!-- Submit button -->
-    <button type="submit" class="btn btn-warning btn-block mb-4">Crear</button>
+    <button type="submit" class="btn btn-warning btn-block mb-4">
+      Registrar cuenta
+    </button>
   </form>
 </div>

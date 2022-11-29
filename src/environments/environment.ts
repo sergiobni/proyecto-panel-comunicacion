@@ -4,14 +4,14 @@
 
 export const environment = {
   firebase: {
-    projectId: 'proyecto-panel-comunicacion',
-    appId: '1:523594264556:web:3bcdbadcdbb8fc40841ac9',
-    storageBucket: 'proyecto-panel-comunicacion.appspot.com',
-    apiKey: 'AIzaSyDvuVU1Y-QWHxhK0xZIdmwDySL4xNq8DvA',
-    authDomain: 'proyecto-panel-comunicacion.firebaseapp.com',
-    messagingSenderId: '523594264556',
+    projectId: 'panel2-77a5b',
+    appId: '1:1026619297403:web:4a84779a60119f6f8edcde',
+    storageBucket: 'panel2-77a5b.appspot.com',
+    apiKey: 'AIzaSyDwTT6P3lvma3quSNZCprdfbxVhRLA2U7E',
+    authDomain: 'panel2-77a5b.firebaseapp.com',
+    messagingSenderId: '1026619297403',
   },
-  production: false
+  production: false,
 };
 
 /*

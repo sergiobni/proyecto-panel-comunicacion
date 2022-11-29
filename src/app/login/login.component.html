@@ -9,42 +9,44 @@
       role="tabpanel"
       aria-labelledby="tab-login"
     >
+      <div class="text-center mb-3">
+        <p>Entra con tu cuenta Google:</p>
+        <button
+          type="button"
+          (click)="onClick()"
+          class="btn btn-warning btn-floating mx-1"
+        >
+          <i class="bi bi-google"></i>
+        </button>
+      </div>
       <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
-        <div class="text-center mb-3">
-          <p>Entra con tu cuenta Google:</p>
-          <button
-            type="button"
-            (click)="onClick()"
-            class="btn btn-warning btn-floating mx-1"
-          >
-            <i class="bi bi-google"></i>
-          </button>
-        </div>
-
         <p class="text-center">Entra con tu cuenta de usuario:</p>
 
         <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="email" id="loginName" class="form-control" />
-          <label class="form-label" for="loginName">Email</label>
+          <input type="email" class="form-control" formControlName="email" />
+          <label class="form-label">Email</label>
         </div>
 
         <!-- Password input -->
         <div class="form-outline mb-4">
-          <input type="password" id="loginPassword" class="form-control" />
-          <label class="form-label" for="loginPassword">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+          />
+          <label class="form-label">Contraseña</label>
         </div>
 
         <!-- Submit button -->
         <button type="submit" class="btn btn-warning btn-block mb-4">
           Entrar
         </button>
-
-        <!-- Register buttons -->
-        <div class="text-center">
-          <p>¿No tienes cuenta aún? <a href="/register"> Regístrate</a></p>
-        </div>
       </form>
+
+      <div class="text-center">
+        <p>¿No tienes cuenta aún? <a href="/register"> Regístrate</a></p>
+      </div>
     </div>
   </div>
 </div>
