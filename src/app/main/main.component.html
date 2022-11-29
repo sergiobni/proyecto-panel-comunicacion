@@ -22,11 +22,11 @@
               data-bs-toggle="collapse"
               class="nav-link px-0 align-middle"
             >
-              <i class="fs-4 bi-speedometer2"></i>
+              <i class="fs-4 bi bi-egg"></i>
               <span class="ms-1 d-none d-sm-inline">Alimentación</span>
             </a>
             <ul
-              class="collapse show nav flex-column ms-1"
+              class="collapse nav flex-column ms-1"
               id="submenu1"
               data-bs-parent="#menu"
             >
@@ -105,8 +105,9 @@
               data-bs-toggle="collapse"
               class="nav-link px-0 align-middle"
             >
-              <i class="fs-4 bi-bootstrap"></i>
-              <span class="ms-1 d-none d-sm-inline">Cominucación</span></a
+            <i class="fs-4 bi bi-telephone"></i>
+
+              <span class="ms-1 d-none d-sm-inline">Comunicación</span></a
             >
             <ul
               class="collapse nav flex-column ms-1"
@@ -171,7 +172,7 @@
               data-bs-toggle="collapse"
               class="nav-link px-0 align-middle"
             >
-              <i class="fs-4 bi-bootstrap"></i>
+              <i class="fs-4 bi bi-bicycle"></i>
               <span class="ms-1 d-none d-sm-inline">Ocio</span></a
             >
             <ul
@@ -270,7 +271,7 @@
               data-bs-toggle="collapse"
               class="nav-link px-0 align-middle"
             >
-              <i class="fs-4 bi-bootstrap"></i>
+              <i class="fs-4 bi bi-shop"></i>
               <span class="ms-1 d-none d-sm-inline">Lugar</span></a
             >
             <ul
@@ -353,7 +354,7 @@
               data-bs-toggle="collapse"
               class="nav-link px-0 align-middle"
             >
-              <i class="fs-4 bi-bootstrap"></i>
+              <i class="fs-4 bi bi-bug"></i>
               <span class="ms-1 d-none d-sm-inline">Ser vivo</span></a
             >
             <ul
@@ -412,7 +413,7 @@
               data-bs-toggle="collapse"
               class="nav-link px-0 align-middle"
             >
-              <i class="fs-4 bi-bootstrap"></i>
+              <i class="fs-4 bi bi-book-half"></i>
               <span class="ms-1 d-none d-sm-inline">Educación</span></a
             >
             <ul
@@ -477,7 +478,7 @@
               data-bs-toggle="collapse"
               class="nav-link px-0 align-middle"
             >
-              <i class="fs-4 bi-bootstrap"></i>
+              <i class="fs-4 bi bi-cloud-sun"></i>
               <span class="ms-1 d-none d-sm-inline">Tiempo</span></a
             >
             <ul
@@ -542,7 +543,7 @@
               data-bs-toggle="collapse"
               class="nav-link px-0 align-middle"
             >
-              <i class="fs-4 bi-bootstrap"></i>
+              <i class="fs-4 bi bi-briefcase"></i>
               <span class="ms-1 d-none d-sm-inline">Trabajo</span></a
             >
             <ul
@@ -607,7 +608,7 @@
               data-bs-toggle="collapse"
               class="nav-link px-0 align-middle"
             >
-              <i class="fs-4 bi-bootstrap"></i>
+              <i class="fs-4 bi bi-bank"></i>
               <span class="ms-1 d-none d-sm-inline">Conocimiento</span></a
             >
             <ul
@@ -706,7 +707,7 @@
 <!-- CARDS -->
 
     <div *ngIf="pictogramsList" class="row">
-      <div class="col-md-4 mb-3" *ngFor="let pictogram of pictogramsList">
+      <div class="col-md-4 mb-3" *ngFor="let pictogram of pictogramsList | paginate: { itemsPerPage: 6, currentPage: page }">
         <a [href]="'/vistadetalle/' + pictogram._id">
           <div class="card" style="width: 18rem">
             <span class="border border-warning border border-5"></span>
@@ -728,3 +729,8 @@
     </div>
   </div>
 </div>
+
+<!-- PAGINACIÓN (PARTE DEL CÓDIGO EN EL BUCLE FOR) -->
+
+  <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
+                      nextLabel="Siguiente"></pagination-controls>
