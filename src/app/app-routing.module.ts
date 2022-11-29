@@ -9,6 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { RegisterComponent } from './register/register.component';
 import { VistadellateComponent } from './vistadellate/vistadellate.component';
+import { AlimentoAnimalComponent } from './cards/alimento-animal/alimento-animal.component';
+import { AlimentoProcesadoComponent } from './cards/alimento-procesado/alimento-procesado.component';
+import { AlimentoVegetalComponent } from './cards/alimento-vegetal/alimento-vegetal.component';
+import { CocinaComponent } from './cards/cocina/cocina.component';
 
 const routes: Routes = [
   {
@@ -44,8 +48,24 @@ const routes: Routes = [
     component: RegisterComponent,
   },
   {
-    path: 'vistadetalle',
+    path: 'vistadetalle/:id',
     component: VistadellateComponent,
+  },
+  {
+    path: 'alimento-animal',
+    component: AlimentoAnimalComponent,
+  },
+  {
+    path: 'alimento-procesado',
+    component: AlimentoProcesadoComponent,
+  },
+  {
+    path: 'alimento-vegetal',
+    component: AlimentoVegetalComponent,
+  },
+  {
+    path: 'cocina',
+    component: CocinaComponent,
   },
 ];
 
